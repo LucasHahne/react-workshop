@@ -466,15 +466,11 @@ img {
 .book-list-item,
 .example-book {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   gap: 0.15rem;
-  margin: 0 0 0 0;
-}
 
-.gridRight {
-  text-align: left;
-  align-self: center;
+  margin: 2rem 0;
 }
 
 .book-list-item_free:before {
