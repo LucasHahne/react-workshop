@@ -17,6 +17,7 @@ export const ThemeEditor = () => {
       {otherColors?.map((color) => {
         return (
           <button
+            key={color}
             style={{ backgroundColor: color }}
             onClick={() => setPrimaryColor(color)}
           ></button>

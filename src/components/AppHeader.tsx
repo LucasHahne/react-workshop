@@ -7,18 +7,22 @@ import { NavLink } from "react-router-dom";
 export const AppHeader = () => {
   const { primaryColor } = useContext(ThemeContext);
   const links = [
-    { path: "/books", text: "Books" },
-    { path: "/about", text: "About" },
+    { path: "/books", text: "Books", id: 1 },
+    { path: "/about", text: "About", id: 2 },
   ];
 
   return (
     <div className="app-header">
-      <img src={logo} alt="Awesome image" />
+      <img src={logo} alt="Awesome super logo" />
       <h1 style={{ color: primaryColor }}>Bookmonkey</h1>
       <ThemeEditor></ThemeEditor>
       <nav>
         {links?.map((navLink) => {
-          return <NavLink to={navLink.path}>{navLink.text}</NavLink>;
+          return (
+            <NavLink to={navLink.path} key={navLink.id}>
+              {navLink.text}
+            </NavLink>
+          );
         })}
       </nav>
     </div>

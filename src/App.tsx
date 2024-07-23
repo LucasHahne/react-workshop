@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { AppHeader } from "./components/AppHeader";
-import { BookList } from "./components/BookList";
 import { ThemeContext } from "./domain/theme/ThemeContext";
 import { Outlet } from "react-router-dom";
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BookListItemProps } from "../domain/book/BookListItem";
 import { LikeCounter } from "./LikeCounter";
 import { Hideable } from "./Hideable";
+import { NavLink } from "react-router-dom";
 
 export const BookListItem = ({ book }: BookListItemProps) => {
   const cn = (...classes: (string | boolean | null | undefined | number)[]) => {
@@ -24,6 +25,7 @@ export const BookListItem = ({ book }: BookListItemProps) => {
       </h2>
       <h3>{book.subtitle}</h3>
       <div className="text-meta">by {book.author}</div>
+      <NavLink to={`/books/${book.isbn}`}>More Details...</NavLink>
       <Hideable
         shouldShowChildren={shouldShowChildren}
         setShouldShowChildren={setShouldShowChildren}
